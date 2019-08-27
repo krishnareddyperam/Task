@@ -1,0 +1,65 @@
+<!-- <div class="row">
+  <div class="col-md-5">
+    <form [FormGroup]="this.customerService.form" (ngSubmit)="onSubmit()">
+      <input type="hidden" formControlName="$key">
+      <div class="form-group">
+        <label>Full Name</label>
+        <input formControlName="fullName" class="form-control">
+      </div>
+      <div class="form-group">
+          <label>Email</label>
+          <input formControlName="email" class="form-control">
+      </div>
+      <div class="form-group">
+          <label>Mobile</label>
+          <input formControlName="mobile" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Location</label>
+            <input formControlName="location" class="form-control">
+          </div>
+          <div class="form-group">
+              <input type="text" class="btn btn-primary" value="submit">
+            </div>
+    </form>
+    </div>
+    <div class="col-md-7">
+      <app-customer-list></app-customer-list>
+  </div>
+  </div>
+
+   -->
+
+
+<div class="container">
+<br/>
+<div class="row">
+<div class="group">
+  <div class="col-md-6">
+  <input type="text" class="form-control" [(ngModel)]="userName" #userName="ngModel" name="name" placeholder="Enter UserName" (input)="Search()"/>&nbsp; &nbsp;
+</div>
+</div>
+
+<div class="group">
+<div class="col-md-6">
+    <input #userName /> &nbsp;
+  <button type="submit" class="btn btn-primary" (click)="add(userName.value); userName.value=''">Add</button>
+</div>
+ </div> </div>
+<br/>
+
+  <table class="table table-bordered">
+    <tr>
+      <th>Id</th>
+      <th>Name</th> 
+      <th>UserName</th> 
+      <th>Email</th>
+      </tr>
+      <tbody *ngFor="let x of customers">
+        <tr>
+          <td>{{x.id}}</td>
+          <td>{{x.name}}</td>
+          <td>{{x.username}}</td>
+          <td>{{x.email}}</td>
+      </table>
+      </div>

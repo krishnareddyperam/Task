@@ -1,0 +1,17 @@
+. src
+.---0 app
+    +---0 customer
+    |   |---customer.component.ts|.html|.css
+    |
+    +---0 customer-list
+    |   |---customer-list.component.ts|.html|.css
+    |
+    +---0 shared
+    |   |---customer.service.ts
+    |
+    |---app.module.ts
+    |
+    +---0 environments
+    |   |---environment.ts (saved firebase connection details)
+    |
+    |--- index.html (cdn path for bootstrap)
